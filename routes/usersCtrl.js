@@ -34,7 +34,7 @@ module.exports = {
             return res.status(400).json({ 'error' : 'password invalide (must be length 4-8 include 1 number)'})
         }
 
-        asynchLib.waterfall([
+        asyncLib.waterfall([
         function(done) {
             models.User.findOne({
                 attributes: ['email'],
